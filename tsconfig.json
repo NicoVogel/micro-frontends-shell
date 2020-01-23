@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "outDir": "dist",
+    "sourceMap": true,
+    // "strict": true,
+    // "diagnostics": true,
+    // "forceConsistentCasingInFileNames": true
+  },
+  // "include": [
+  //   "src/**/*"
+  // ],
+  // "exclude": [
+  //   "node_modules"
+  // ]
+}
