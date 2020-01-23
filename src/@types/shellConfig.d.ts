@@ -1,11 +1,13 @@
 import { MicroFrontendConfig } from "./mfConfig";
 
 export interface ShellConfig {
-    baseUrl: string;
+    initialRoute: string;
     preloadAll: boolean;
-    container: string;
+    containerId: string;
     configs: MFConfigs;
-    router: LayoutRouter;
+    routerSrc: string;
+    layouts: PageLayout[];
+    router?: LayoutRouter;
 }
 
 /**
@@ -19,7 +21,7 @@ export interface MFConfigs {
  * provide a function which selects the layout based on an url string
  */
 export interface LayoutRouter {
-    getLayout(url: string): PageLayout
+    getLayout(url: string, config: ShellConfig): PageLayout;
 }
 
 /**
@@ -29,7 +31,7 @@ export interface PageLayout {
     name: string;
     parts: PageLayoutPart[];
     htmlSource: string;
-    cssSource?: string;
+    cssSource?: string | string[];
 }
 
 /**
@@ -38,5 +40,5 @@ export interface PageLayout {
 export interface PageLayoutPart {
     id: string;
     mfId?: string;
-    layout: PageLayout;
+    layout?: PageLayout;
 }
