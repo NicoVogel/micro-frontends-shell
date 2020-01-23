@@ -1,0 +1,27 @@
+{
+    "initialRoute": "/",
+    "preloadAll": true,
+    "containerId": "shell",
+    "configs": {
+        "test": {
+            "tag": "test",
+            "baseUrl": "http://localhost:5001",
+            "scripts": {
+                "path": "service/layout.js"
+            }
+        }
+    },
+    "layouts": [
+        {
+            "name": "default",
+            "parts": [],
+            "htmlSource": "http://localhost:5001/layouts/default.html"
+        },
+        {
+            "name": "threeSections",
+            "parts": [],
+            "htmlSource": "http://localhost:5001/layouts/threeSections.html"
+        }
+    ],
+    "routerSrc": "http://localhost:5001/impl/router.js"
+}
