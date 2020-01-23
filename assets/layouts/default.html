@@ -1,0 +1,61 @@
+<div class="page">
+    <div class="left-bar">
+        <div class="menu">
+            MENU
+        </div>
+    </div>
+    <div class="right-bar">
+        <div class="header">HEADER</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</div>
+<style>
+    * {
+        text-align: center;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        position: relative;
+    }
+
+    .left-bar {
+        position: absolute;
+        left: 0px;
+        width: 200px;
+        height: 100%;
+        border-right: 2px solid red;
+    }
+
+    .right-bar {
+        margin-left: 200px;
+        padding-top: 150px;
+    }
+
+    .header {
+        position: fixed;
+        left: 200px;
+        top: 0px;
+        right: 0px;
+        height: 150px;
+        border: 2px solid blue;
+        background: #eeeeee;
+    }
+
+    .content {
+        height: 100px;
+    }
+
+    /*replace with height:auto; for real content*/
+    .footer {
+        height: 40px;
+        border-top: 2px solid green;
+        background: #eeeeee;
+    }
+</style>
