@@ -10,8 +10,9 @@ async function init() {
     const router = await loader.loadRouter(config.routerSrc);
 
     const updateLayout = () => {
-        console.log(location)
-        layout.loadLayout(router.getLayout(location.hash, config));
+        const hashIndex = location.hash.indexOf('#');
+        const hash = hashIndex === -1 ? '/' : location.hash.substr(hashIndex + 1);
+        layout.loadLayout(router.getLayout(hash, config));
     }
     window.onhashchange = () => updateLayout();
     updateLayout();
