@@ -1,0 +1,35 @@
+{
+  "name": "mf-shell",
+  "version": "0.0.1",
+  "description": "Shell goals: - lazy load components   - use the file id's in order to ignore identical files    - if a mf needs a subtag of another component, load it - create custom layouts   - allow to load multiple layouts - load mf based on route and layout   - a mf is loaded if the selected layout needs it    - only main elements can be added in a layout   - some mecanism which allows to only patialy reload the page. for example only the content part of the layout changes, than only this is changed",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "cp -a assets/. dist/",
+    "serve": "serve ./dist/",
+    "serve:2": "serve -l 5001 ./dist/",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoVogel/micro-frontends-shell.git"
+  },
+  "keywords": [
+    "micro",
+    "fronteds",
+    "shell"
+  ],
+  "author": "Nico Vogel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoVogel/micro-frontends-shell/issues"
+  },
+  "homepage": "https://github.com/NicoVogel/micro-frontends-shell#readme",
+  "devDependencies": {
+    "serve": "^11.3.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
